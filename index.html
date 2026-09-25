@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>صلِّ على النبي ﷺ — تذكير بفائدة مختلفة كل مرة</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="pattern"></div>
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="#">
+        <img src="assets/logo.png" alt="شعار" />
+        <span>تذكير الصلاة على النبي</span>
+      </a>
+      <div class="nav-actions">
+        <a class="btn btn-gold" id="topDownload" href="SalliAlaAlNabi.exe" download="SalliAlaAlNabi.exe">تحميل برنامج ويندوز EXE</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <img class="ornament" src="assets/ornament.png" alt="" />
+      <div class="mark">ﷺ</div>
+      <h1>صلِّ على النبي محمد</h1>
+      <p class="lead">
+        تذكير جميل كل مدة تختارها — مش جملة واحدة تتكرر وتملّ منها.
+        كل مرة تظهر <b style="color:var(--gold2)">فائدة ونتيجة</b> مختلفة حتى يثبت القلب ويعمل، لا يمرّر الإشعار بلا وعي.
+      </p>
+    </header>
+
+    <section class="panel">
+      <div class="live" id="liveState"><span class="pulse"></span> التذكير يعمل على هذه الصفحة</div>
+      <div class="controls">
+        <div>
+          <div class="label">المدة بين كل تذكير</div>
+          <div class="presets" id="presets">
+            <button class="chip active" data-sec="10">10 ثوانٍ</button>
+            <button class="chip" data-sec="30">30 ثانية</button>
+            <button class="chip" data-sec="60">دقيقة</button>
+            <button class="chip" data-sec="300">5 دقائق</button>
+          </div>
+          <div class="row">
+            <input id="sec" type="number" min="5" max="86400" value="10" />
+            <span class="hint">ثانية — الأقل 5 ثوانٍ. على ويندوز غيّرها من أيقونة بجانب الساعة.</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-gold" id="toggle">إيقاف مؤقت</button>
+            <button class="btn" id="now">أظهر تذكيراً الآن</button>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat"><b id="count">0</b><span>مرة صلّيت عليه هنا</span></div>
+          <div class="stat"><b id="shown">0</b><span>تذكير ظهر</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <article class="panel card">
+        <h3>ليه فائدة مختلفة كل مرة؟</h3>
+        <p>
+          العقل يملّ من الرتابة فيحوّل الذكر إلى ضوضاء. لذلك كل إشعار يحمل <b style="color:var(--cream)">نتيجة</b>:
+          عشر صلوات من الله، قرب يوم القيامة، تفريج همّ، شفاعة، بركة رزق…
+          تقرأ الفائدة ثم تنطق: <b style="color:var(--gold2)">اللهم صلِّ وسلِّم على نبينا محمد</b>.
+        </p>
+      </article>
+      <article class="panel card">
+        <h3>برنامج الويندوز</h3>
+        <ol>
+          <li>اضغط زر التحميل — الملف ينزل تلقائياً باسم <b style="color:var(--cream)">SalliAlaAlNabi.exe</b></li>
+          <li>شغّله بنقرتين. يعمل في الخلفية وأيقونة بجانب الساعة.</li>
+          <li>يظهر التذكير أسفل الشاشة بدون ما يوقف كتابتك.</li>
+          <li>زر يمين على الأيقونة: المدة، التشغيل مع ويندوز، خروج.</li>
+          <li>لو ظهر SmartScreen: المزيد من المعلومات ← تشغيل على أي حال (البرنامج جديد وغير موقّع رقمياً).</li>
+        </ol>
+      </article>
+    </div>
+
+    <section class="panel download-box" id="download">
+      <h2>حمّل ملف الويندوز EXE</h2>
+      <p>ملف واحد صغير، بدون تثبيت. بعد التشغيل يذكّرك بالفائدة والنتيجة حتى وأنت في شغلك.</p>
+      <a class="btn btn-gold" id="mainDownload" href="SalliAlaAlNabi.exe" download="SalliAlaAlNabi.exe">⬇ تنزيل SalliAlaAlNabi.exe الآن</a>
+      <p class="tiny">لنظام ويندوز 64-بت (10 و11). الحجم تقريباً 58 كيلوبايت. لا يحتاج نت بعد التحميل.</p>
+    </section>
+
+    <footer>اللهم صلِّ وسلِّم وبارك على نبينا محمد وعلى آله وصحبه. اجعل هذا التذكير عملاً لا مجرد شاشة.</footer>
+  </div>
+
+  <div class="toast" id="toast" role="dialog" aria-live="polite">
+    <div class="toast-top">
+      <span>صلِّ على النبي ﷺ</span>
+      <button class="x" id="closeToast" aria-label="إغلاق">✕</button>
+    </div>
+    <div class="salawat">اللهم صلِّ وسلِّم على نبينا محمد</div>
+    <div class="benefit">
+      <small>النتيجة والفائدة</small>
+      <p id="benefitText"></p>
+    </div>
+    <div class="toast-foot" id="toastFoot">اضغط النافذة بعد أن تصلّي عليه</div>
+  </div>
+
+  <script src="benefits.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
